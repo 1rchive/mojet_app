@@ -26,6 +26,14 @@
     "plugins": [
       "expo-router",
       [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
@@ -37,6 +45,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "supabaseUrl": "https://dsgqlvdvipidqgehioww.supabase.co",
+      "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzZ3FsdmR2aXBpZHFnZWhpb3d3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYwMDM1NzYsImV4cCI6MjA3MTU3OTU3Nn0.gSH1E8a5KOoILHRNrvdFxwX_pDxuNYR2e-VX1p82ciY",
+      "revenueCatAppleApiKey": "test_DvtfLEosfMnnancMqWiKHzbRoSQ",
+      "revenueCatGoogleApiKey": "test_DvtfLEosfMnnancMqWiKHzbRoSQ"
     }
   }
 }
