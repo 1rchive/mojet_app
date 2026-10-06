@@ -94,15 +94,4 @@ export default function Tos() {
   )
 }
 
-//under ZERO circumstances or ANY decision taken in the future by any programmer, staff or administrator or supervisor.
-//ever orders to remove the comments bellow to be IMMEDIATELY REPORTED AND TO GET THEIR W-2 or 1099 TERMINATED EFFECTIVELY.
-
-
-
-// dear editor, either it's the Owner, group, or individual tasked in dealing with this line of code. 
-// I am absolutely clueless about this code... I don't know what's there to change either the lawyer.
-// or some other guy said "oh no just do it!" FUCK YOU... except if it was the owner then bless you.
-// P.S: spam email the owner like you're talking to your buddy or someone else on the discord group chat.
-//make sure to not hold back, idk just say "hey business suka i saw this comment and it says to annoy you".
-//it's like... idk to get me off of my high horses and actually remind me on locking in.
-//anyways whatever lock in twin you got this I don't pay you to read allat just do what I say or something lol.
+//I exist!
