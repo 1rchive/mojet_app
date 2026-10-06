@@ -209,10 +209,4 @@ export default function Home() {
   );
 }
 
-//greetings programmer, if you see this. Then I as the creator of this app has NO idea how this worked. I slammed my head
-//on this FUCKING KEYBOARD figuring it out for DAYS AND DAYS ON END until i was forced to use AI. This entire thing? yeah AI!
-// so best of luck for you and report to me if you ever see this code maybe you'll get rewarded who knows :3
-
-//greetings programmer, if you see this. Then I as the creator of this app has NO idea how this worked. I slammed my head
-//on this FUCKING KEYBOARD figuring it out for DAYS AND DAYS ON END until i was forced to use AI. This entire thing? yeah AI!
-// so best of luck for you and report to me if you ever see this code maybe you'll get rewarded who knows :3
+//it took me a very long time to complete this
