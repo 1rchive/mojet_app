@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, SafeAreaView, ScrollView, StatusBar } from 'react-native';
-import { router } from 'expo-router';
 import { Ionicons } from "@expo/vector-icons";
+import { router } from 'expo-router';
+import React, { useState } from 'react';
+import { SafeAreaView, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Experience() {
   const [selected, setSelected] = useState<string | null>(null);

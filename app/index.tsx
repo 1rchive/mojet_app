@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { ActivityIndicator, StatusBar, Text, View } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router } from "expo-router";
+import React, { useEffect } from "react";
+import { ActivityIndicator, StatusBar, Text, View } from "react-native";
 import { supabase } from "./lib/supabase";
 const NEW_USER_ONBOARDING_KEY = "new_user_pending_onboarding";
 

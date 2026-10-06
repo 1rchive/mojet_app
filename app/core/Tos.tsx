@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Text, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native'
-import { router } from 'expo-router'
 import { Ionicons } from "@expo/vector-icons"
+import { router } from 'expo-router'
+import React from 'react'
+import { SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 
 export default function Tos() {
   return (

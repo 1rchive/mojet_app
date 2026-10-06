@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, SafeAreaView, StatusBar } from 'react-native';
-import { router } from 'expo-router';
 import { Ionicons } from "@expo/vector-icons";
+import { router } from 'expo-router';
+import React, { useState } from 'react';
+import { SafeAreaView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Goals() {
   const [selected, setSelected] = useState<string | null>(null);

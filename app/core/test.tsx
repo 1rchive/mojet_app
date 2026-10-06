@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Text, View, TouchableOpacity, Alert, StatusBar } from "react-native";
-import { router } from "expo-router";
-import { CameraView, CameraType, useCameraPermissions } from "expo-camera";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { CameraType, CameraView, useCameraPermissions } from "expo-camera";
+import { router } from "expo-router";
+import React, { useEffect, useRef, useState } from "react";
+import { Alert, StatusBar, Text, TouchableOpacity, View } from "react-native";
 import { supabase } from '../lib/supabase';
 
 export default function BodyScan() {

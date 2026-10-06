@@ -13,18 +13,16 @@ const isWeeklyPackage = (pkg: PurchasesPackage) =>
 const isAnnualPackage = (pkg: PurchasesPackage) =>
   pkg.packageType === "ANNUAL" || pkg.product.subscriptionPeriod === "P1Y";
 
-const isMonthlyPackage = (pkg: PurchasesPackage) =>
-  pkg.packageType === "MONTHLY" || pkg.product.subscriptionPeriod === "P1M";
-
 const getPackagePriority = (pkg: PurchasesPackage) => {
   if (isWeeklyPackage(pkg)) return 0;
   if (isAnnualPackage(pkg)) return 1;
-  if (isMonthlyPackage(pkg)) return 2;
-  return 3;
+  return 2;
 };
 
 const getPaywallPackages = (packages: PurchasesPackage[]) =>
-  [...packages].sort((a, b) => getPackagePriority(a) - getPackagePriority(b));
+  [...packages]
+    .filter((pkg) => isWeeklyPackage(pkg) || isAnnualPackage(pkg))
+    .sort((a, b) => getPackagePriority(a) - getPackagePriority(b));
 
 const getDefaultPackage = (packages: PurchasesPackage[]) => packages[0] ?? null;
 
@@ -41,12 +39,6 @@ const getTargetLabel = (pkg: PurchasesPackage) => {
       : "Yearly subscription";
   }
 
-  if (isMonthlyPackage(pkg)) {
-    return pkg.product.pricePerMonthString
-      ? `${pkg.product.pricePerMonthString}/MONTH`
-      : "Monthly subscription";
-  }
-
   return "Auto-renewing subscription";
 };
 
@@ -58,11 +50,6 @@ const getPurchaseButtonText = (
   if (hasSubscription) return "Continue";
   if (purchasing) return "Processing...";
   if (!selectedPackage) return "Select a Plan";
-  
-  if (isWeeklyPackage(selectedPackage)) {
-    return `Try Free - ${selectedPackage.product.priceString}/week`;
-  }
-  
   return "Unlock";
 };
 
@@ -138,7 +125,6 @@ export default function Paywall() {
 
       if (hasActiveEntitlement(customerInfo)) {
         setHasSubscription(true);
-        // Navigate after a small delay to ensure state updates
         setTimeout(() => router.push("/core/test"), 500);
       } else {
         setErrorText("Purchase completed but subscription not activated. Please try again.");
@@ -251,7 +237,6 @@ export default function Paywall() {
               {packageOptions.map((pkg) => {
                 const isSelected = selectedPackage?.identifier === pkg.identifier;
                 const targetLabel = getTargetLabel(pkg);
-                const isWeekly = isWeeklyPackage(pkg);
 
                 return (
                   <TouchableOpacity
@@ -264,24 +249,13 @@ export default function Paywall() {
                   >
                     <View className="flex-row justify-between items-center">
                       <View className="flex-1">
-                        <View className="flex-row items-center gap-2 mb-1">
-                          <Text
-                            className={`text-2xl font-black italic uppercase tracking-tight ${
-                              isSelected ? "text-black" : "text-white"
-                            }`}
-                          >
-                            {pkg.product.title}
-                          </Text>
-                          {isWeekly && (
-                            <View className={`px-2 py-1 rounded-full ${isSelected ? "bg-black/10" : "bg-white/10"}`}>
-                              <Text className={`text-[9px] font-bold uppercase tracking-[1px] ${
-                                isSelected ? "text-black" : "text-white"
-                              }`}>
-                                TRY FREE
-                              </Text>
-                            </View>
-                          )}
-                        </View>
+                        <Text
+                          className={`text-2xl font-black italic uppercase tracking-tight mb-1 ${
+                            isSelected ? "text-black" : "text-white"
+                          }`}
+                        >
+                          {pkg.product.title}
+                        </Text>
                         <Text
                           className={`text-[10px] font-bold uppercase tracking-[2px] mt-1 ${
                             isSelected ? "text-gray-600" : "text-gray-500"
@@ -344,4 +318,3 @@ export default function Paywall() {
     </SafeAreaView>
   );
 }
-

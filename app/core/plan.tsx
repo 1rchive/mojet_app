@@ -1,7 +1,7 @@
+import { FontAwesome, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import { FontAwesome, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 export default function plan() {
   return (

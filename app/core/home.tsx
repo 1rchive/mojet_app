@@ -1,9 +1,9 @@
-import { router } from 'expo-router';
-import React, { useCallback, useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Modal, ActivityIndicator, StatusBar } from 'react-native';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useIsFocused } from '@react-navigation/native';
+import { useIsFocused } from 'expo-router/react-navigation';
+import { router } from 'expo-router';
+import React, { useCallback, useEffect, useState } from 'react';
+import { ActivityIndicator, Modal, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import { supabase } from '../lib/supabase';
 
 type Card = { id: string; title: string; createdAt: number; imageUri?: string; workoutContent?: string };

@@ -1,7 +1,7 @@
+import { Ionicons } from "@expo/vector-icons";
 import { router } from 'expo-router';
 import React from 'react';
-import { View, Text, TouchableOpacity, SafeAreaView, StatusBar } from 'react-native';
-import { Ionicons } from "@expo/vector-icons";
+import { SafeAreaView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 
 export default function OnboardingScreen() {
   return (

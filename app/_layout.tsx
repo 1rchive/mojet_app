@@ -1,12 +1,12 @@
-import { Stack, useRouter, useSegments } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Session } from "@supabase/supabase-js";
 import Constants from "expo-constants";
+import { Stack, useRouter, useSegments } from "expo-router";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, Platform, StatusBar, Text, View } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import Purchases from "react-native-purchases";
-import { Session } from "@supabase/supabase-js";
-import { supabase } from "./lib/supabase";
 import "../global.css";
+import { supabase } from "./lib/supabase";
 
 type RevenueCatExtra = {
   revenueCatAppleApiKey?: string;

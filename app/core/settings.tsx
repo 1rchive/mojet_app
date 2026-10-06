@@ -1,8 +1,8 @@
-import React from 'react';
-import { Alert, Modal, Text, TouchableOpacity, View } from 'react-native';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
 import { router } from 'expo-router';
+import React from 'react';
+import { Alert, Modal, Text, TouchableOpacity, View } from 'react-native';
 import { supabase } from '../lib/supabase';
 
 export default function Settings() {

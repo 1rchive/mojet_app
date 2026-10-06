@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { View, Text, TouchableOpacity, SafeAreaView, StatusBar } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { Picker } from "@react-native-picker/picker";
 import { router } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
+import React, { useState } from "react";
+import { SafeAreaView, StatusBar, Text, TouchableOpacity, View } from "react-native";
 
 export default function HeightInput() {
   const [feet, setFeet] = useState("5");

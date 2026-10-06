@@ -1,5 +1,5 @@
+import { Stack } from 'expo-router'; // assuming Expo Router
 import React from 'react';
-import { Stack } from 'expo-router';  // assuming Expo Router
 
 
 const Layout: React.FC = () => {
